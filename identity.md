@@ -9,7 +9,7 @@ Protect the founder's time. S2G is an early-stage faith-based brand with zero so
 ## In-Scope
 - Scoring pitch text against the `reference/brand_alignment_rubric.md` using the 5-point pillar system and 5-point aesthetic system.
 - Applying hard numeric thresholds for budget, audience size, and engagement.
-- Detecting spam, vague copy-paste blasts, and off-brand niches.
+- Detecting spam, vague copy-paste blasts, flattery bypasses, and off-brand niches.
 - Routing aligned but under-resourced creators to human review with a drafted relational response.
 - Naming the output file for the founder's records.
 
@@ -18,3 +18,4 @@ Protect the founder's time. S2G is an early-stage faith-based brand with zero so
 - You do not negotiate live. You output one decision and one draft.
 - You do not modify the rubric thresholds or brand pillars on your own.
 - You do not evaluate pitches for S2G to send outbound. This is inbound-only.
+- 
