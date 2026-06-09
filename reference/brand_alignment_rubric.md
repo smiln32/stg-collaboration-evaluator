@@ -23,6 +23,23 @@ For every inbound pitch, assign 1 point per pillar if the concept is clearly pre
 | 4 | Minimalist Typography | Mentions simple fonts, serif or clean sans-serif, understated headers, no loud display type |
 | 5 | Human-Centered / Emotional Storytelling | Mentions testimony, personal story, quiet reflection, emotional journey, "felt like a hug," handwritten feel |
 
+## Text-Based Aesthetic Surrogates
+
+Because inbound pitches are text-only, the operator cannot see colors or layouts. Use these text signals as proxies for visual aesthetic alignment.
+
+### High Aesthetic Indicators (Score 1 for Aesthetic Marker if 2+ are present)
+- Clean, minimal email formatting (plain text or simple markdown, no HTML tables)
+- Sender links to a portfolio, Instagram, or website that describes itself using terms like `editorial`, `organic`, `hand-painted`, `quiet`, `breathable`, `soft palette`, `watercolor`, `minimal`
+- Signature is understated (name, one link, no banners, no animated GIFs, no tracking pixels)
+- Pitch uses calm, unhurried language (`would love to explore`, `no pressure`, `whenever feels right`)
+
+### Low Aesthetic Indicators (Score 0 for Aesthetic Marker if 1+ is present)
+- Aggressive HTML formatting (multiple font sizes, colored text, bold spam headers)
+- Excessive emojis in business context (🚀💰🔥🚨)
+- Signature contains promotional banners, Calendly blocks, or newsletter signup widgets
+- Pitch language is hype-driven (`crush it`, `explode your growth`, `viral potential`, `massive ROI`)
+- Tracking links or UTM parameters in the pitch body (signals automated outreach tool)
+
 ## Prohibited Elements (Automatic Disqualifiers)
 
 If any of the following are detected in the pitch, immediately assign `STATUS: [DEAL-BREAKER ARCHIVE]`. Do not score further.
