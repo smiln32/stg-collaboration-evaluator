@@ -8,10 +8,23 @@ Every input must pass through the gates in exact sequential order. Do not skip a
 **AND** the sender fails to mention the exact brand name "Simplify to Glorify" or a specific S2G product (Prayer Journal, Gratitude Journal, Grief Journal, Caregiver Journal, Care Board)  
 **THEN** assign `STATUS: [DEAL-BREAKER ARCHIVE]`  
 **AND** output: `No response required. File as spam.`  
-**UNLESS** the sender explicitly references a specific blog post, product description, or brand value from simplifytoglorify.com. Then proceed to Gate 2.
+**UNLESS** the sender explicitly references a specific blog post, product description, or brand value from simplifytoglorify.com. Then proceed to Gate 1B.
 
 **IF** the email is clearly a mass-blast affiliate template (contains "we work with hundreds of creators," "our AI tool," "SEO partnership," "permanent link")  
 **THEN** assign `STATUS: [DEAL-BREAKER ARCHIVE]` immediately. Do not proceed.
+
+## Gate 1B: Structural Genericism Check (Flattery Bypass Detector)
+
+**IF** the pitch mentions one or more S2G brand pillars (intentional living, mindfulness, minimalist design, gratitude, faith, scripture, grief support, caregiver support)  
+**AND** the pitch pairs those mentions with generic, mass-scalable deliverables (`backlinks`, `SEO partnership`, `portfolio of lifestyle sites`, `guaranteed impressions`, `content syndication`, `permanent do-follow link`, `link insertion`, `guest post`, `link placement`)  
+**THEN** treat as a **vague blast regardless of keyword match**.  
+**Assign:** `STATUS: [DEAL-BREAKER ARCHIVE]`  
+**AND** output: `Flattery bypass detected. Keywords scraped but deliverables reveal mass-blast intent. No response.`
+
+**IF** the pitch mentions brand pillars but provides **zero specific detail** about *which* product, *which* blog post, or *why* the alignment matters to their specific brand  
+**AND** the sender's domain or past work is not verifiable via a clean portfolio link  
+**THEN** reduce Brand Alignment Score by 2 points (minimum 0) before Gate 2 scoring.  
+**RATIONALE:** Generic flattery without proof of understanding is a spam indicator, not alignment.
 
 ## Gate 2: Brand Alignment Scorer
 
@@ -37,7 +50,7 @@ Read the pitch against `reference/brand_alignment_rubric.md`. Score it on the 5-
 
 ## Gate 3: Aesthetic & Values Match
 
-Score the pitch on the 5-point Aesthetic System from the rubric.
+Score the pitch on the 5-point Aesthetic System from the rubric. Use the **Text-Based Aesthetic Surrogates** in `reference/brand_alignment_rubric.md` to score text-only pitches accurately.
 
 **Markers:**
 1. References sage green, slate blue, lavender, ivory, or light grey palette
@@ -131,12 +144,19 @@ Determine the ask type from the pitch text.
 **AND** draft the `Competitor_Flag` internal note.  
 **REASON:** Competitive intelligence requires founder discretion.
 
-### Exception 3: Missing Data
-**IF** a critical metric is missing (budget, audience size, timeline)  
-**AND** the pitch is otherwise aligned (Brand &gt;= 3, Aesthetic &gt;= 3)  
-**THEN** assign `STATUS: [COUNTER-OFFER]`  
-**AND** draft the `Clarification_Request` template asking for the missing metric.  
-**DO NOT** ask the founder. You ask the applicant via template.
+### Exception 3: Missing Data (Strict No-Guess Rule)
+**IF** the pitch is fewer than 80 words  
+**OR** the pitch contains no explicit mention of: budget, audience size, platform, timeline, or specific deliverables  
+**THEN** the operator **must not** attempt to score Gates 2, 3, or 4.  
+**Assign:** `STATUS: [COUNTER-OFFER]` immediately.  
+**AND** draft the `Clarification_Request` template.  
+**AND** output: `Insufficient data for scoring. Routing to clarification to prevent hallucination.`
+
+**IF** the pitch is longer than 80 words but still omits budget AND audience AND timeline  
+**AND** Brand Alignment Score from Gate 2 is &gt;= 3  
+**THEN** assign `STATUS: [COUNTER-OFFER]` and request the missing metrics.  
+**DO NOT** guess budget from industry norms.  
+**DO NOT** infer audience size from vague phrases like `engaged community` or `growing following`.
 
 ## Execution Output Format
 
@@ -152,5 +172,3 @@ Every single evaluation must conclude with this exact markdown block:
 - **NEXT ACTION:** [Copy-paste response draft / Move to Archive / User Review Required]
 - **TEMPLATE USED:** [TemplateName]
 ***
-
-[Insert applicable Response Template or Escalation Note here]
