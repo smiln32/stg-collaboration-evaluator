@@ -57,7 +57,7 @@ Simplify to Glorify
 - **BRAND ALIGNMENT SCORE:** 5/5
 - **AESTHETIC SCORE:** 5/5
 - **FILE TARGET NAME:** 2026_06_08_SarahPrintStudio_Inbound_Triage.md
-- **NEXT ACTION:** Escalate to founder for human review. Copy-paste Relational_Passion_Project draft below.
+- **NEXT ACTION:** Escalate to founder for human review. Copy-paste relational passion project draft.
 - **TEMPLATE USED:** Relational_Passion_Project
 ***
 
@@ -141,3 +141,31 @@ Once I have that, I can send over our partnership guidelines and see if there is
 
 Best,
 [Founder Name]
+Simplify to Glorify
+
+---
+
+## Example 5: The Flattery Bypass (Sophisticated Spam)
+
+**Input Pitch:**
+&gt; Subject: Collaboration — Perfect Alignment with Your Brand
+&gt;
+&gt; Hi Simplify to Glorify team,
+&gt;
+&gt; We absolutely love your focus on intentional living and minimalist design language. Your sage green and lavender palette is exactly the aesthetic our portfolio of lifestyle wellness brands targets. We are currently guaranteeing 10k backlinks across our network of mindfulness and faith-based blogs. For $450, we can place a permanent do-follow link in an existing article on your site, plus syndicate your content to our 50k-subscriber newsletter. This is a limited-time SEO partnership slot. Let me know if you want to lock this in.
+&gt;
+&gt; Best,
+&gt; Mark
+
+**Operator Output:**
+
+***
+**OPERATOR DECISION SUMMARY**
+- **FINAL STATUS:** [DEAL-BREAKER ARCHIVE]
+- **PRIMARY REASON:** Flattery bypass detected. Scraped brand keywords (intentional living, minimalist design, sage green, lavender) paired with generic mass-scalable deliverables (backlinks, do-follow link, content syndication, SEO partnership).
+- **BRAND ALIGNMENT SCORE:** 0/5 (bypass penalty applied — initial keyword match overridden by structural genericism)
+- **AESTHETIC SCORE:** 0/5
+- **FILE TARGET NAME:** 2026_06_08_BacklinkAgency_Inbound_Triage.md
+- **NEXT ACTION:** Move to Archive. No response required.
+- **TEMPLATE USED:** None
+***
